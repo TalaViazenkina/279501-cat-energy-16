@@ -1,9 +1,20 @@
 .header {
   min-height: 66px;
   border-bottom: 1px solid @gray-lighten;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 22px;
+    border: none;
+  }
 }
 
 .header__inner {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
   &_closed {
     @media (max-width: @mobile-width-only) {
       .header__toggle-icon_open {
@@ -60,6 +71,20 @@
   display: block;
   margin-right: auto;
   margin-left: auto;
+
+  @media (min-width: @tablet-width) {
+    flex-shrink: 0;
+    width: percentage(192 / 708);
+    margin-left: 0;
+  }
+}
+
+.header__logo-image {
+  .size(190px, 38px);
+
+  @media (min-width: @tablet-width) {
+    .size(172px, 57px);
+  }
 }
 
 .header__toggle {
@@ -95,4 +120,11 @@
 .header__toggle-icon {
   display: none;
   color: @icon-dark;
+}
+
+.header__nav {
+  @media (min-width: @tablet-width) {
+    max-width: percentage(516 / 708);
+    margin-left: auto;
+  }
 }
