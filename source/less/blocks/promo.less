@@ -7,6 +7,23 @@
     linear-gradient(to bottom, @bg-green-dark 305px, @white 305px);
   background-repeat: no-repeat;
   background-position: center 0;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 40px;
+
+    text-align: left;
+    color: @gray-darkest;
+
+    background-image: none;
+  }
+}
+
+.promo__inner {
+  @media (min-width: @tablet-width) {
+    position: relative;
+    min-height: 850px;
+    padding-left: 90px;
+  }
 }
 
 .promo__title {
@@ -15,6 +32,11 @@
   margin-bottom: 25px;
 
   font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    .font(60px, 60px);
+    margin-bottom: 40px;
+  }
 }
 
 .promo__slogan {
@@ -23,9 +45,35 @@
   margin-bottom: 28px;
 
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .font(20px, 20px);
+    margin-bottom: 48px;
+  }
 }
 
 .promo__image {
+  .size(280px, 271px);
   margin-top: 0;
+  margin-right: auto;
   margin-bottom: 0;
+  margin-left: auto;
+
+  @media (min-width: @tablet-width) {
+    .size(709px, 609px);
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    z-index: -1;
+  }
+
+  img {
+    display: block;
+  }
+}
+
+.promo__button {
+  @media (min-width: @tablet-width) {
+    min-width: 245px;
+  }
 }
