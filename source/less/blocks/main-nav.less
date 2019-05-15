@@ -4,6 +4,11 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  @media (min-width: @desktop-width) {
+    color: @white;
   }
 }
 
@@ -34,19 +39,29 @@
     padding-bottom: 8px;
 
     border-bottom: 2px solid transparent;
+  }
 
-    &_active {
-      border-color: @bg-green;
-    }
+  @media (min-width: @desktop-width) {
+    .font(20px, 24.86px);
   }
 
   &[href]:hover,
   &[href]:focus {
-    color: rgba(@black, 0.6);
+    opacity: 0.6;
     outline: none;
   }
 
   &[href]:active {
-    color: rgba(@black, 0.3);
+    opacity: 0.3;
+  }
+
+  &_active {
+    @media (min-width: @tablet-width) {
+      border-color: @bg-green;
+    }
+
+    @media (min-width: @desktop-width) {
+      border-color: @white;
+    }
   }
 }
