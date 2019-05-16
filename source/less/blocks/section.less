@@ -41,7 +41,9 @@
   }
 
   &_padding_l {
-    padding-right: @tablet-padding + 75;
+    @media (min-width: @tablet-width) {
+      padding-right: @tablet-padding + 75;
+    }
   }
 
   @media (min-width: @desktop-width) {
