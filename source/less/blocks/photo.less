@@ -1,13 +1,22 @@
 .photo {
-   .size(320px, 240px);
   position: relative;
-  margin-right: auto;
-  margin-left: auto;
+  width: 320px;
+
+
+  @media (min-width: @tablet-width) {
+    width: 690px;
+  }
 }
 
 .photo__box {
+  height: 240px;
   margin-top: 0;
   margin-bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 115px;
+    height: 632px;
+  }
 
   img {
     display: block;
@@ -19,7 +28,23 @@
   top: 0;
   left: 0;
 
-  background-color: @bg-gray-light;
+  background-image: linear-gradient(to top, @bg-gray-light @slider-height-bg, @white @slider-height-bg);
+
+  @media (min-width: @tablet-width) {
+    width: 49%;
+    overflow: hidden;
+  }
+
+  img {
+    max-width: none;
+    height: 100%;
+  }
+}
+
+.photo__after {
+  @media (min-width: @tablet-width) {
+    background-image: linear-gradient(to top, @bg-gray-dark @slider-height-bg, @white @slider-height-bg);
+  }
 }
 
 
