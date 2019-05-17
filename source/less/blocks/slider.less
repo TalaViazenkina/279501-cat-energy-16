@@ -1,5 +1,5 @@
 .slider {
-    @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     position: relative;
   }
 }
@@ -12,6 +12,11 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
     left: 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    left: auto;
   }
 }
 
@@ -32,6 +37,10 @@
     width: 570px;
 
     transform: translateX(-50%);
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 53%;
   }
 }
 
