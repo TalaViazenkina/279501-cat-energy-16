@@ -140,7 +140,7 @@
             </li>
             <li class="results__item">
               <span class="results__key">Затраты на питание: </span>
-              <span class="results__value">15 000 руб.</span>
+              <span class="results__value"> 15 000 руб.</span>
             </li>
           </ul>
         </div>
@@ -179,51 +179,64 @@
     <section class="contacts footer__contacts">
       <h2 class="visually-hidden">Как нас найти?</h2>
       <p class="contacts__info">
-        <b class="contacts__lead">Приглашаем к сотрудничеству дилеров!</b>
-        <span class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</span>
+        <b class="contacts__lead">Приглашаем к&nbsp;сотрудничеству дилеров!</b>
+        <span class="contacts__adress text-arial text-arial_line-height_l">
+          <span>ул. Большая<br>Конюшенная, д. 19/8</span>
+          <span>Санкт-Петербург
+          </span>
+        </span>
       </p>
       <div class="map contacts__map">
-        <img class="map__pin" src="img/map-pin.png" alt="Указатель местонахождения магазина на карте">
-        <img class="map__image" src="img/bg-map-mobile@1x.png" alt="Часть карты с интернет-магазином Cat Energy по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+        <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003165!2d30.320858716173472!3d59.938719169054075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1558166992467!5m2!1sru!2sby" height="362" allowfullscreen></iframe>
+        <p class="map__image">
+          <img class="map__pin" src="img/map-pin.png" alt="Указатель местонахождения магазина на карте">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+            <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="Часть карты с интернет-магазином Cat Energy по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+          </picture>
+        </p>
       </div>
     </section>
-    <a class="footer__logo logo" href="index.html">
-      <svg class="logo__image icon-svg" width="128" height="23" focusable="false" aria-label="Логотип интернет-магазина функционального питания для котов Cat Energy">
-        <use xlink:href="#logo-footer"></use>
-      </svg>
-    </a>
-    <ul class="social footer__social">
-      <li class="social__item">
-        <a class="social__link" href="#">
-          <span class="visually-hidden">Cat Energy в ВКонтакте</span>
-          <svg class="social__icon icon-svg" width="22" height="12" focusable="false">
-            <use xlink:href="#icon-vk-mobile"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link" href="#">
-          <span class="visually-hidden">Cat Energy в Инстаграме</span>
-          <svg class="social__icon icon-svg" width="16" height="16" focusable="false">
-            <use xlink:href="#icon-insta-mobile"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link" href="#">
-          <span class="visually-hidden">Cat Energy на Фейсбуке</span>
-          <svg class="social__icon icon-svg" width="10" height="19" focusable="false">
-            <use xlink:href="#icon-fb-mobile"></use>
-          </svg>
-        </a>
-      </li>
-    </ul>
-    <a class="copyright footer__copyright">
-      HTML Academy
-      <svg class="copyright__icon icon-svg" width="60" height="60" focusable="false">
-        <use xlink:href="#htmlacademy"></use>
-      </svg>
-    </a>
+    <div class="footer__inner container">
+      <a class="footer__logo logo" href="index.html">
+        <svg class="logo__image icon-svg" width="128" height="23" focusable="false" aria-label="Логотип интернет-магазина функционального питания для котов Cat Energy">
+          <use xlink:href="#logo-footer"></use>
+        </svg>
+      </a>
+      <ul class="social footer__social">
+        <li class="social__item">
+          <a class="social__link footer__link" href="#">
+            <span class="visually-hidden">Cat Energy в ВКонтакте</span>
+            <svg class="social__icon footer__icon icon-svg" width="22" height="12" focusable="false">
+              <use xlink:href="#icon-vk-mobile"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link footer__link" href="#">
+            <span class="visually-hidden">Cat Energy в Инстаграме</span>
+            <svg class="social__icon footer__icon icon-svg" width="16" height="16" focusable="false">
+              <use xlink:href="#icon-insta-mobile"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link footer__link" href="#">
+            <span class="visually-hidden">Cat Energy на Фейсбуке</span>
+            <svg class="social__icon footer__icon icon-svg" width="10" height="19" focusable="false">
+              <use xlink:href="#icon-fb-mobile"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <a class="copyright footer__copyright footer__link text-arial text-arial_size_l" href="https://htmlacademy.ru/intensive/adaptive">
+        HTMLAcademy
+        <svg class="copyright__icon footer__icon icon-svg" width="60" height="60" focusable="false">
+          <use xlink:href="#htmlacademy"></use>
+        </svg>
+      </a>
+    </div>
   </footer>
 
   <script src="js/header.js"></script>
