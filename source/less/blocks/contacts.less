@@ -1,6 +1,10 @@
 .contacts {
   background-color: @white;
 
+  &_bg {
+    background-color: @bg-gray-light;
+  }
+
   @media (min-width: @tablet-width) {
     position: relative;
   }
@@ -54,13 +58,13 @@
 .contacts__adress {
   .text-arial();
   .font(14px, 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 50%;
 
   @media (min-width: @tablet-width) {
     .font(16px, 20px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     text-align: right;
   }
 
