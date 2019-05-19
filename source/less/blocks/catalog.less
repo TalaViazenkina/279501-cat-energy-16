@@ -5,6 +5,10 @@
 
   &:last-child {
     border-bottom: 1px solid @border-gray;
+
+    @media (min-width: @tablet-width) {
+      border: none;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -12,5 +16,4 @@
     padding-bottom: 60px;
     border: none;
   }
-
 }
