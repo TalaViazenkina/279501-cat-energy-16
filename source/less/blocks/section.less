@@ -16,6 +16,8 @@
 
 .section__list {
   .list-off();
+  margin-right: @mobil-padding * -1;
+  margin-left: @mobil-padding * -1;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -31,6 +33,9 @@
 }
 
 .section__item {
+  padding-right: @mobil-padding;
+  padding-left: @mobil-padding;
+
   @media (min-width: @tablet-width) {
     display: flex;
     padding-right: @tablet-padding;

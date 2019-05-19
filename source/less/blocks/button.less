@@ -1,7 +1,6 @@
 .button {
-  .font(14px; 18px);
   display: block;
-  padding: 11px 20px;
+  padding: 10px 20px;
 
   text-align: center;
   text-transform: uppercase;
@@ -10,16 +9,8 @@
   background-color: @bg-green;
 
   @media (min-width: @tablet-width) {
-    .font(20px, 20px);
     padding-top: 16px;
     padding-bottom: 16px;
-  }
-
-  &_inline {
-    @media (min-width: @tablet-width) {
-      display: inline-block;
-      vertical-align: bottom;
-    }
   }
 
   &:hover,
@@ -32,4 +23,28 @@
   &:active {
     color: rgba(@white, 0.3);
   }
+
+  &_inline {
+    @media (min-width: @tablet-width) {
+      display: inline-block;
+      vertical-align: bottom;
+    }
+  }
+
+  &_theme_gray {
+    color: @gray-darken;
+    background-color: @bg-gray-light;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: @gray-lightest;
+    }
+
+    &:active {
+      color: rgba(@gray-darken, 0.3);
+    }
+  }
 }
+
+
