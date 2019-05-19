@@ -21,6 +21,13 @@
     padding-top: 7px;
     padding-bottom: 7px;
   }
+
+  &_text_left {
+    @media (min-width: @desktop-width) {
+      width: 45px;
+      text-align: left;
+    }
+  }
 }
 
 .features__item {
@@ -29,5 +36,9 @@
   @media (min-width: @tablet-width) {
     padding-top: 7px;
     padding-bottom: 7px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
   }
 }

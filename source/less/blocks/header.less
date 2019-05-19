@@ -10,8 +10,13 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 52px;
+  }
 
-    background-image: linear-gradient(to right, @white 50%, @bg-green-dark 50%);
+  &_bg {
+    @media (min-width: @desktop-width) {
+      color: @white;
+      background-image: linear-gradient(to right, @white 50%, @bg-green-dark 50%);
+    }
   }
 }
 
