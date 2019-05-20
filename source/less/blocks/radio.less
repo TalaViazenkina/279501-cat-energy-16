@@ -2,6 +2,10 @@
   .font(16px; 18px);
   color: @icon-dark;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .font(20px, 20px);
+  }
 }
 
 .radio__label {
@@ -10,6 +14,10 @@
   padding: 6px 0 6px 45px;
 
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 0 10px 60px;
+  }
 
   &::before {
     .size(30px, 30px);
@@ -21,6 +29,10 @@
 
     border-radius: 50%;
     border: 1px solid @gray;
+
+    @media (min-width: @tablet-width) {
+      .size(40px, 40px);
+    }
   }
 
   &::after {
@@ -35,6 +47,12 @@
 
     background-color: @bg-green;
     border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      .size(18px, 18px);
+      top: 11px;
+      left: 11px;
+    }
   }
 }
 

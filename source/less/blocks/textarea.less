@@ -2,7 +2,6 @@
   .font(16px; 18px);
 
   display: block;
-  width: 100%;
   height: 150px;
   padding: 12px 10px 12px 15px;
 
@@ -10,6 +9,12 @@
   color: @gray-darken;
 
   border: 1px solid rgba(@gray, 0.5);
+
+  @media (min-width: @tablet-width) {
+    .font(20px, 20px);
+    height: 174px;
+    padding: 15px 15px 15px 20px;
+  }
 
   &:hover {
     border-color: @gray;

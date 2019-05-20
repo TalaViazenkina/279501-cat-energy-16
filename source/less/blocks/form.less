@@ -1,6 +1,10 @@
 .form {
   padding-bottom: 30px;
   font: inherit;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 70px;
+  }
 }
 
 .form__wrapper {
@@ -28,6 +32,12 @@
   padding-top: 20px;
   padding-bottom: 10px;
 
+    @media (min-width: @tablet-width) {
+    margin-right: @product-padding;
+    margin-left: @product-padding;
+    margin-bottom: 40px;
+  }
+
   &_border {
     margin-right: @mobil-padding * -1;
     margin-left: @mobil-padding * -1;
@@ -36,12 +46,45 @@
     padding-left: @mobil-padding;
 
     border: 1px solid @border-gray;
+
+    @media (min-width: @tablet-width) {
+      margin-right: @product-padding;
+      margin-left: @product-padding;
+      margin-bottom: 80px;
+      padding-top: 24px;
+      padding-left: 27px;
+
+      .form__item {
+        margin-bottom: 13px;
+      }
+    }
   }
+
+  &_col {
+    @media (min-width: @tablet-width) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-bottom: 20px;
+
+      .form__item {
+        width: percentage(284 / 634);
+        margin-bottom: 32px;
+      }
+    }
+  }
+
 }
 
 .form__item {
   margin-top: 0;
   margin-bottom: 14px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .form__container {
@@ -62,19 +105,63 @@
 
   background-color: @white;
 
+  @media (min-width: @tablet-width) {
+    .font(36px, 36px);
+    margin-left: 0;
+    margin-bottom: 55px;
+    padding-left: @product-padding;
+    padding-right: @product-padding;
+  }
+
   &_narrow {
     width: 225px;
+
+    @media (min-width: @tablet-width) {
+      width: auto;
+
+    }
   }
 }
 
 .form__textarea {
   margin-top: 25px;
   margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 15px;
+    margin-right: @product-padding;
+    margin-left: @product-padding;
+    margin-bottom: 70px;
+  }
+}
+
+.form__inner {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .form__button {
+  .font(16px, 20px);
+  padding: 10px 20px;
   margin-top: 10px;
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    .font(20px, 20px);
+    width: calc(50% - @product-padding - @tablet-padding);
+    margin-top: 0;
+    margin-left: @product-padding;
+    margin-bottom: 0;
+    margin-right: @tablet-padding;
+    padding: 16px 20px;
+
+  }
 }
 
 .form__text {
@@ -83,6 +170,14 @@
   margin-top: 0;
   margin-bottom: 0;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    .font(16px, 16px);
+    width: calc(50% - @product-padding - @tablet-padding);
+    margin-right: @product-padding;
+    margin-left: @tablet-padding;
+    text-align: left;
+  }
 }
 
 
