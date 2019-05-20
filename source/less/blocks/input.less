@@ -8,14 +8,17 @@
 }
 
 .input__label {
+  flex-shrink: 0;
   display: block;
+  padding-right: 14px;
   color: @icon-dark;
 }
 
 .input__control {
   flex-grow: 1;
+  width: percentage(172 / 280);
   height: 45px;
-  padding: 12px 15px 12px;
+  padding: 12px 15px 12px 12px;
 
   text-transform: uppercase;
   color: @gray-darken;
@@ -44,7 +47,7 @@
 .input__icon {
   position: absolute;
   top: 50%;
-  right: 30px;
+  right: 35px;
 
   color: @icon-dark;
 
