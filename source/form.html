@@ -61,48 +61,48 @@
       </p>
     </div>
     <form  class="form" action="https://echo.htmlacademy.ru" method="post">
-      <div class="container form__wrapper">
-        <div class="form__group">
-          <p class="input form__item">
+      <div class="container form__inner">
+        <div class="form__group form__group_half-width">
+          <p class="input form__input">
             <label  class="input__label" for="name">Имя:*</label>
             <input class="input__control" type="text" id="name" name="name" value="Барсик" required>
           </p>
-          <p class="input form__item">
+          <p class="input form__input">
             <label  class="input__label" for="weight">Вес (кг):*</label>
             <input class="input__control" type="text" id="weight" name="weight" value="7" required>
           </p>
-          <p class="input form__item">
+          <p class="input form__input">
             <label  class="input__label" for="age">Возраст (лет):</label>
             <input class="input__control" type="text" id="age" name="age" value="7">
           </p>
         </div>
-        <ul class="form__group form__group_border">
-          <li class="radio form__item">
+        <ul class="form__group-radio">
+          <li class="radio form__radio">
             <input class="visually-hidden radio__control" id="slim" type="radio" name="product-type" value="slim" checked>
             <label class="radio__label" for="slim">Похудение</label>
           </li>
-          <li class="radio form__item">
+          <li class="radio form__radio">
             <input class="visually-hidden radio__control" id="pro" type="radio" name="product-type" value="pro">
             <label class="radio__label" for="pro">Набор массы</label>
           </li>
-          <li class="radio form__item">
+          <li class="radio form__radio">
             <input class="visually-hidden radio__control" id="advice" type="radio" name="product-type" value="advice">
             <label class="radio__label" for="advice">Не знаю (нужен ваш совет)</label>
           </li>
         </ul>
       </div>
-      <div class="form__wrapper form__wrapper_theme_decor">
-        <div class="container form__container">
+      <div class="form__wrapper">
+        <div class="container form__inner">
           <h2 class="form__group-title form__group-title_narrow">Контактные данные (владельца кота)</h2>
           <div class="form__group">
-            <p class="input form__item">
+            <p class="input form__input">
               <label class="input__label" for="email">E-mail:*</label>
               <input class="input__control" id="email" type="email" name="email" value="kuklachev@gmail.com" required>
               <svg class="input__icon icon-svg" width="17" height="13" focusable="false">
                 <use xlink:href="#icon-mail"></use>
               </svg>
             </p>
-            <p class="input form__item">
+            <p class="input form__input">
               <label class="input__label" for="phone">Телефон:*</label>
               <input class="input__control" id="phone" type="tel" name="phone" value="8 (960) 900-60-90" required>
               <svg class="input__icon icon-svg" width="20" height="20" focusable="false">
@@ -112,29 +112,29 @@
           </div>
         </div>
       </div>
-      <div class="form__wrapper form__wrapper_theme_decor">
-        <div class="container form__container textarea">
+      <div class="form__wrapper">
+        <div class="container form__inner textarea">
           <label class="form__group-title" for="message">Комментарий</label>
           <textarea class="textarea__control form__textarea" id="message" name="message">Расскажите обо всех повадках кота</textarea>
         </div>
       </div>
-      <div class="form__wrapper form__wrapper_theme_decor">
-        <div class="container form__container">
+      <div class="form__wrapper">
+        <div class="container form__inner">
           <h2 class="form__group-title">Дополнительно</h2>
-          <ul class="form__group form__group_col">
-            <li class="checkbox form__item">
+          <ul class="form__group-check">
+            <li class="checkbox form__check">
               <input class="visually-hidden checkbox__control" id="sweetener" type="checkbox" name="add-sweetener" checked >
               <label class="checkbox__label" for="sweetener">Сахарозаменитель</label>
             </li>
-            <li class="checkbox form__item">
+            <li class="checkbox form__check">
               <input class="visually-hidden checkbox__control" id="water" type="checkbox" name="add-water">
               <label class="checkbox__label" for="water">Питьевая вода</label>
             </li>
-            <li class="checkbox form__item">
+            <li class="checkbox form__check">
               <input class="visually-hidden checkbox__control" id="milk" type="checkbox" name="add-milk">
               <label class="checkbox__label" for="milk">Молоко</label>
             </li>
-            <li class="checkbox form__item">
+            <li class="checkbox form__check">
               <input class="visually-hidden checkbox__control" id="vitamins" type="checkbox" name="add-vitamins" >
               <label class="checkbox__label" for="vitamins">Витамины</label>
             </li>
