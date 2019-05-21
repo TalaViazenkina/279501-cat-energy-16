@@ -364,10 +364,13 @@
             </li>
           </ul>
           <div class="gift catalog-extra__gift">
-            <svg class="gift__icon icon-svg" width="56" height="60" focusable="false">
-              <use xlink:href="#icon-gift"></use>
-            </svg>
-            <p class="gift__description">Закажите все<br>и получите чехол для<br>кота в подарок!</p>
+            <!-- Добавлена обертка, для решения проблемы выравнивания флек-элементов во флекс-контейнере с минимальной высотой в ie11 -->
+            <div class="gift__inner">
+              <svg class="gift__icon icon-svg" width="56" height="60" focusable="false">
+                <use xlink:href="#icon-gift"></use>
+              </svg>
+              <p class="gift__description">Закажите все<br>и получите чехол для<br>кота в подарок!</p>
+            </div>
           </div>
         </div>
       </div>
