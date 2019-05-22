@@ -3,11 +3,20 @@
   display: flex;
   align-items: center;
   position: relative;
+  padding-right: @mobil-padding;
+  padding-left: @mobil-padding;
 
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
     .font(20px, 20px);
+    padding-right: @form-padding;
+    padding-left: @form-padding;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: @desktop-padding;
+    padding-left: @desktop-padding;
   }
 }
 
@@ -61,11 +70,15 @@
 .input__icon {
   position: absolute;
   top: 50%;
-  right: 35px;
+  right: 35px + @mobil-padding;
 
   color: @icon-dark;
 
   transform: translate(100%, -50%);
+
+   @media (min-width: @tablet-width) {
+    right: 35px + @form-padding;
+  }
 
   @media (min-width: @desktop-width) {
     right: 35px + @desktop-padding;
