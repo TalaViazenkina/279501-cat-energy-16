@@ -2,8 +2,10 @@
   .text-arial();
   .font(14px, 18px);
   display: flex;
-  margin-bottom: 20px;
   align-items: center;
+  margin-bottom: 20px;
+  padding-right: @mobil-padding;
+  padding-left: @mobil-padding;
 
   @media (min-width: @tablet-width) {
     .font(16px, 24px);
@@ -11,6 +13,8 @@
     display: block;
     width: 50%;
     margin-bottom: 30px;
+    padding-right: @tablet-padding + 75;
+    padding-left: @tablet-padding;
     padding-top: 130px;
     padding-bottom: 85px;
   }
@@ -18,6 +22,8 @@
   @media (min-width: @desktop-width) {
     width: 25%;
     margin-bottom: 0;
+    padding-right: @desktop-padding;
+    padding-left: @desktop-padding;
     padding-bottom: 73px;
   }
 
