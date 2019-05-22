@@ -8,6 +8,13 @@
   background-repeat: no-repeat;
   background-position: center 0;
 
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image:
+      url("../img/index-background-mobile@2x.jpg"),
+      linear-gradient(to bottom, @bg-green-dark 305px, @white 305px);
+    background-size: 320px auto, 100%;
+  }
+
   @media (min-width: @tablet-width) {
     text-align: left;
     color: @gray-darkest;
@@ -24,6 +31,14 @@
       linear-gradient(to left, @bg-green-dark 50%, @white 50%);
     background-repeat: no-repeat;
     background-position: right 0 bottom 0;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image:
+        linear-gradient(to left, transparent 50%, @white 50%),
+        url("../img/index-background-desktop@2x.jpg"),
+        linear-gradient(to left, @bg-green-dark 50%, @white 50%);
+      background-size: 100%, 720px auto, 100%;
+    }
   }
 }
 
