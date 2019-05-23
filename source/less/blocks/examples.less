@@ -55,8 +55,13 @@
 }
 
 .examples__wrapper {
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
     justify-content: space-between;
   }
 }
@@ -102,12 +107,14 @@
   margin-left: @mobil-padding * -1;
 
   @media (min-width: @tablet-width) {
+    align-self: center;
     margin-top: 58px;
     margin-right: 0;
     margin-left: 0;
   }
 
   @media (min-width: @desktop-width) {
+    align-self: stretch;
     display: flex;
     margin-top: 0;
     margin-right: @desktop-padding * -1;
