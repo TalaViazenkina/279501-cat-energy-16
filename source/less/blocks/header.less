@@ -1,0 +1,161 @@
+.header {
+  min-height: 66px;
+  border-bottom: 1px solid @gray-lighten;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 22px;
+    padding-bottom: 13px;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 52px;
+  }
+
+  &_bg {
+    @media (min-width: @desktop-width) {
+      color: @white;
+      background-image: linear-gradient(to right, @white 50%, @bg-green-dark 50%);
+    }
+  }
+}
+
+.header__inner {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &_closed {
+    @media (max-width: @mobile-width-only) {
+      .header__toggle-icon_open {
+        display: block;
+      }
+
+      .header__nav {
+        display: none;
+      }
+    }
+  }
+
+  &_opened {
+    @media (max-width: @mobile-width-only) {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      overflow-y: auto;
+      background-image: linear-gradient(to bottom, @white 0, @white 65px, transparent 65px);
+
+      .header__toggle-icon_close {
+        display: block;
+      }
+
+      .header__nav {
+        background-color: @white;
+        border-bottom: 1px solid @gray-lighten;
+      }
+    }
+  }
+
+  &_nojs {
+    @media (max-width: @mobile-width-only) {
+      position: static;
+      margin-right: @mobil-padding * -1;
+      margin-left: @mobil-padding * -1;
+
+      .header__toggle {
+        display: none;
+      }
+
+      .header__nav {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.header__logo {
+  .size(280px, 65px);
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: @tablet-width) {
+    flex-shrink: 0;
+    width: percentage(192 / 708);
+    margin-left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 50%;
+    margin-right: 0;
+  }
+}
+
+.header__logo-image {
+  .size(190px, 38px);
+
+  @media (min-width: @tablet-width) {
+    .size(172px, 57px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .size(202px, 60px);
+  }
+}
+
+.header__toggle {
+  .size(65px; 65px);
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.header__toggle-icon {
+  display: none;
+  color: @icon-dark;
+}
+
+.header__nav {
+  @media (min-width: @tablet-width) {
+    max-width: percentage(516 / 708);
+    margin-top: 5px;
+    margin-left: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 50%;
+    width: 50%;
+    margin-left: 0;
+  }
+}

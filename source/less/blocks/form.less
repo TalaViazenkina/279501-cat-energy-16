@@ -1,0 +1,266 @@
+.form {
+  padding-bottom: 30px;
+  font: inherit;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 20px;
+    padding-bottom: 80px;
+  }
+}
+
+.form__positioner {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    max-width: 1024px;
+    padding-right: @tablet-padding;
+    padding-left: @tablet-padding;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1300px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  &_col {
+    @media (min-width: @tablet-width) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+
+      .form__group {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      .form__group {
+        width: 50%;
+        align-self: flex-start;
+        padding-top: 0;
+      }
+    }
+  }
+}
+
+.form__group {
+  &_col {
+    @media (min-width: @tablet-width) {
+      display: flex;
+      flex-wrap: wrap;
+
+      .form__input {
+        width: 100%;
+      }
+
+      .form__check {
+        width: 50%;
+        margin-bottom: 32px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      .form__input {
+        width: 50%;
+      }
+
+      .form__check {
+        width: 25%;
+        margin-bottom: 32px;
+      }
+    }
+  }
+}
+
+.form__group-input {
+  padding-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+}
+
+.form__input {
+  margin-top: 0;
+  margin-bottom: 14px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.form__group-radio {
+  .list-off();
+  margin-bottom: 30px;
+  padding-top: 20px;
+  padding-right: @mobil-padding;
+  padding-bottom: 10px;
+  padding-left: @mobil-padding;
+
+  border: 1px solid @border-gray;
+
+  @media (min-width: @tablet-width) {
+    margin-right: @form-padding;
+    margin-left: @form-padding;
+    margin-bottom: 75px;
+    padding-top: 24px;
+    padding-right: 27px;
+    padding-left: 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.form__radio {
+  margin-bottom: 12px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 14px;
+  }
+}
+
+.form__wrapper {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    height: 3px;
+    background-color: @bg-green;
+
+    @media (min-width: @tablet-width) {
+      top: 20px;
+    }
+  }
+}
+
+.form__group-title {
+  .font(24px, 24px);
+  align-self: flex-start;
+  margin-top: 0;
+  margin-bottom: 35px;
+  padding-left: @mobil-padding;
+  padding-right: @mobil-padding;
+  font-weight: 400;
+
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    .font(36px, 36px);
+    margin-bottom: 55px;
+    padding-left: @form-padding;
+    padding-right: @form-padding;
+  }
+
+  &_narrow {
+    width: 225px;
+
+    @media (min-width: @tablet-width) {
+      width: auto;
+      padding-left: @form-padding;
+      padding-right: @form-padding;
+    }
+  }
+}
+
+.form__textarea {
+  margin-bottom: 30px;
+  margin-right: @mobil-padding;
+  margin-left: @mobil-padding;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 20px;
+    margin-right: @form-padding;
+    margin-left: @form-padding;
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 15px;
+    margin-bottom: 70px;
+  }
+}
+
+.form__group-check {
+  .list-off();
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 23px;
+    padding-right: @form-padding - @tablet-padding;
+    padding-left: @form-padding - @tablet-padding;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 30px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.form__check {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.form__button {
+  .font(16px, 20px);
+  padding: 10px 20px;
+  margin-right: @mobil-padding;
+  margin-left: @mobil-padding;
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    .font(20px, 20px);
+    flex-grow: 1;
+    margin-right: @tablet-padding;
+    margin-left: @form-padding;
+    margin-bottom: 0;
+    padding: 16px 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: @desktop-padding;
+    margin-left: @desktop-padding;
+    margin-bottom: 0;
+  }
+}
+
+.form__text {
+  .text-arial();
+  .font(14px, 16px);
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: @mobil-padding;
+  padding-left: @mobil-padding;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    .font(16px, 16px);
+    width: 50%;
+    text-align: left;
+    padding-right: @form-padding;
+    padding-left: @tablet-padding;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: @desktop-padding;
+    padding-left: @desktop-padding;
+  }
+}

@@ -1,0 +1,122 @@
+.results {
+  .list-off();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.results__item {
+  .font(14px, 20px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: percentage(124 / 280);
+  margin-bottom: 15px;
+
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    align-items: center;
+    width: percentage(162 / 708);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: percentage(162 / 366);
+    justify-content: center;
+    margin-bottom: 53px;
+  }
+
+  &:first-child {
+    @media (min-width: @tablet-width) {
+      margin-right: auto;
+    }
+  }
+}
+
+.results__key {
+  .text-arial();
+  .font(12px, 12px);
+  width: 87px;
+  margin-top: -13px;
+  padding: 5px 10px;
+
+  text-align: center;
+  text-transform: lowercase;
+
+  background-color: @bg-gray-light;
+
+  @media (min-width: @tablet-width) {
+    .font(14px, 14px);
+    width: auto;
+    background-color: @white;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @bg-gray-light;
+  }
+}
+
+.results__value {
+  .font(24px, 24px);
+  width: 100%;
+  padding: 15px;
+
+  text-align: center;
+
+  border: 1px solid @gray;
+  border-radius: 3px;
+
+  @media (min-width: @tablet-width) {
+    .font(30px, 37.02px);
+    padding: 15px 20px 20px;
+  }
+}
+
+.results__item-total {
+  .font(14px, 20px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 15px;
+
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .font(20px, 20px);
+    flex-direction: column;
+    align-items: flex-end;
+    width: percentage(342 / 708);
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+.results__key-total {
+  @media (min-width: @tablet-width) {
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.results__value-total {
+  padding-left: 5px;
+
+  @media (min-width: @desktop-width) {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 20px;
+  }
+}

@@ -1,0 +1,97 @@
+.gift {
+  display: flex;
+  flex-direction: column;
+}
+
+.gift__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 289px;
+  padding-top: 65px;
+  padding-right: 20px;
+  padding-bottom: 45px;
+  padding-left: 20px;
+
+  color: @white;
+
+  background-color: @bg-green-dark;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 280px 289px;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: center;
+    min-height: 200px;
+    padding-top: 10px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    padding-left: 90px;
+
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    background-size: 708px 200px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 289px;
+    padding-top: 65px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    background-size: 245px 289px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+    }
+  }
+}
+
+.gift__icon {
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+    margin-right: 230px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: auto;
+  }
+}
+
+.gift__description {
+  .font(16px, 20px);
+  .text-arial();
+  margin-top: auto;
+  margin-bottom: 0;
+
+  text-align: center;
+  color: @white;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+    margin-top: 10px;
+    padding-left: 50px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    margin-top: auto;
+    padding-left: 0;
+    text-align: center;
+  }
+}

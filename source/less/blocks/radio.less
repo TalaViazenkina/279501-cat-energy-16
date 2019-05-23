@@ -1,0 +1,85 @@
+.radio {
+  .font(16px; 18px);
+  display: flex;
+  color: @icon-dark;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .font(20px, 20px);
+  }
+}
+
+.radio__label {
+  position: relative;
+  display: block;
+  padding: 6px 20px 6px 45px;
+
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 20px 10px 60px;
+  }
+
+  &::before {
+    .size(30px, 30px);
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    border-radius: 50%;
+    border: 1px solid @gray;
+
+    @media (min-width: @tablet-width) {
+      .size(40px, 40px);
+    }
+  }
+
+  &::after {
+    .size(12px, 12px);
+    content: "";
+    position: absolute;
+
+    top: 9px;
+    left: 9px;
+
+    display: none;
+
+    background-color: @bg-green;
+    border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      .size(18px, 18px);
+      top: 11px;
+      left: 11px;
+    }
+  }
+}
+
+.radio__control:checked ~ .radio__label::after {
+  display: block;
+}
+
+.radio__label:hover::before,
+.radio__control:focus ~ .radio__label::before {
+  border-color: @gray-dark;
+}
+
+.radio__control:active ~ .radio__label {
+  opacity: 0.3;
+}
+
+.radio__control:active ~ .radio__label::before {
+  border-color: @gray-dark;
+}
+
+.radio__control:disabled ~ .radio__label,
+.radio__control:disabled:active ~ .radio__label {
+  cursor: default;
+  opacity: 0.3;
+}
+
+.radio__control:disabled ~ .radio__label::after {
+  background-color: @gray;
+}

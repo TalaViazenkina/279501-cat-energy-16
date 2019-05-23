@@ -1,0 +1,30 @@
+.catalog {
+  @media (min-width: @tablet-width) {
+    padding-top: 30px;
+  }
+}
+
+.catalog__item {
+  padding-bottom: 25px;
+  border: 1px solid @border-gray;
+  border-bottom: none;
+
+  &:last-child {
+    border-bottom: 1px solid @border-gray;
+
+    @media (min-width: @tablet-width) {
+      border: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+    padding-bottom: 60px;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 25%;
+    padding-bottom: 60px;
+  }
+}
